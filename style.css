@@ -1,0 +1,514 @@
+﻿/*Подключение шрифта*/
+@font-face {
+    font-family: 'bignoodletitling';
+    src: url('font/bignoodletitling.ttf');
+    font-style: normal;
+    font-weight: normal;
+}
+
+
+
+/* Обшая настройка сайта*/
+html, body {
+    margin: 0;
+}
+body{
+    font-size: 14px;
+    line-height: 100%;
+    font-weight: 300;
+    color: #696969;
+}
+
+
+
+/* Шапка сайта*/
+.topheader{
+    z-index: 99999;
+    position: fixed;
+    width: 100%;
+    background: white;
+    height: 140px; /* Изменено */
+    transition: 0.3s; /* Добавленно */
+}
+.topheader.is-fixed a{
+    margin-top: 0px;
+}
+.logo{
+    font-family: 'bignoodletitling';
+    display: block;
+    position: absolute;
+    top: 12%;
+    bottom: auto;
+}
+.logo>a>img{
+    margin-top: -10px;
+    padding-right: 10px;
+    height: 70px;
+}
+.logo>a{
+    display: flex;
+    align-items: center;
+    width: 70%;
+    color: #696969;
+    text-transform: uppercase;
+    font-size: 20px;
+    line-height: initial;
+}
+
+
+
+/*Слайдер*/
+.banner {
+    background: url(images/slider.jpg) #696969;
+    background-blend-mode: multiply, normal;
+    display: flex;
+    color: #d6d5d5;
+    align-items: center;
+    min-height: 650px;
+    width: 100%;
+    background-size: cover;
+    text-align: center;
+}
+.banner p {
+    font-family: 'bignoodletitling';
+    font-size: 2rem;
+}
+.banner h2{
+    font-family: 'bignoodletitling';
+    font-size: 3rem;
+}
+/*Кнопка для прокрутки вниз (в слайдере)*/
+.scrolldown {
+    position: absolute;
+    left: calc(50% - 52px);
+    margin-top: 15%;
+}
+.scrolldown img {
+	margin-bottom: 20px;
+}
+.scrolldown p{
+	color: #fff;
+	font-family: 'Roboto', sans-serif;
+	font-size: 12px;
+	font-weight: 700;
+}
+
+
+
+/*Блок о нас*/
+.abouts {
+    margin-bottom: 90px;
+}
+.advantage {
+    text-align: center;
+    padding: 30px;
+    background: #ebebeb;
+    width: 100%;
+}
+.advantage span{
+   font-size: 60px;
+   color: #f4511e;
+}
+.advantage h4{
+    font-family: 'Roboto', sans-serif;
+	font-weight: 700;
+	font-size: 18px;
+	letter-spacing: 0.25px;
+	color: #707070;
+	padding: 25px 0 13px;
+}
+.advantage p{
+    color: #707070;
+    font-size: 14px;
+    line-height: 100%;
+}
+/*Шапка блока о нас*/
+h3{
+    font-family: 'bignoodletitling';
+    font-size: 38px;
+    text-transform: uppercase;
+}
+.head_white_content {
+    padding: 5%;
+    width: 100%;
+    text-align: center;
+}
+.head_white_content>span {
+    width: 140px;
+    height: 2px;
+    display: inline-block;
+    background: #f4511e;
+}
+.head_white_content p{
+    padding: 20px 90px 0px;
+    color: #696969;
+}
+
+
+
+/*Блок - мы в цифрах*/
+.somefutures {
+    text-align: center;
+    padding: 60px 0;
+    display: block;
+    background-color: #171f23;
+    color: #f6f6f6;
+}
+/*Шапка блока мы в цифрах*/
+h4 {
+    font-family: 'bignoodletitling';
+    font-size: 38px;
+    text-transform: uppercase;
+}
+.head_black_content {
+    padding-bottom: 20px;
+    text-align: center;
+}
+.head_black_content span {
+    width: 160px;
+    height: 2px;
+    display: inline-block;
+    background: #f4511e;
+    margin: 25px auto 0;
+}
+.numeral>div>span {
+    /*Обращение к иконке*/
+    font-size: 60px;
+    color: #f4511e;
+}
+.numeral>div>p {
+    /*Обращение к заголовку цифры*/
+    font-size: 18px;
+    padding: 30px 0;
+}
+.numeral>div>h5{
+    /*Обращение к цифре*/
+    font-size: 48px;
+}
+
+
+
+/*Блок цены*/
+.price {
+    text-align: center;
+    padding: 60px 0;
+    display: block;
+    background-color: #171f23;
+    color: #f6f6f6;
+}
+.price-content {
+    width: 110%;
+}
+/*Добавим рамку при наведении*/
+.price-content:hover{
+    border: 1px solid #f4511e;
+}
+/*Выделение цифр при наведении*/
+.price-content:hover .price-content-body>p>span{
+    color: #f4511e;
+}
+/*Заголовок блока цен*/
+.price-content-head {
+    background: #0e1316;
+    color: #ffffff;
+    padding: 40px 0 30px;
+}
+.price-content-head h4{
+    padding-top: 6px;
+    font-size: 24px;
+}
+.price-content-head p{
+    font-size: 14px;
+    margin-top: 25px;
+    padding: 0 25px;
+}
+/*Тело для блока цен*/
+.price-content-body {
+    background: #1f282c;
+    padding: 45px 0 40px;
+    letter-spacing: 1px;
+}
+.price-content-body p{
+    font-size: 14px;
+    color: #ffffff;
+    padding-bottom: 20px;
+}
+/*Стиль для цифр*/
+.price-content-body p span{
+    font-size: 14 px;
+    margin-right: 2px;
+}
+/*Стиль для кнопок*/
+.price-content-body a{
+    background: #f4511e;
+    color:#ffffff;
+    border-radius: 5px;
+    padding: 10px 30px;
+    font-size: 24px;
+}
+/*Стиль для левой половины слайдера - команда*/
+.sinner1 {
+    padding: 110px 90 px 80 px;
+    padding-top: 40px;
+    text-align: center;
+    background: #ebebeb;
+    min-height: 440px;
+}
+.sinner img {
+    margin: 0 auto;
+}
+.sinner h4 {
+    font-size: 20px;
+    margin-top: 10px;
+}
+/*Стиль для правой половины слайдера - команда*/
+.sinner2 {
+    padding: 110px 90 px 80 px;
+    padding-top: 40px;
+    text-align: center;
+    background: #ebebeb;
+    min-height: 440px;
+}
+.sinner2 h4 {
+    font-family: 'bignoodletitling';
+}
+/*Настройки навигации слайдера*/
+.team {
+    padding-bottom: 90px;
+}
+.team .bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {
+    position: absolute;
+    bottom: 50px;
+    width: 100;
+    left: -34%;
+}
+
+
+
+/* Блок партнёры*/
+.partners {
+    color:#f6f6f6;
+    background: url(images/cbanner.jpg) no-repeat center center;
+    background-size: cover;
+    padding: 30px 0;
+}
+.innerwidth {
+    margin: 0 auto;
+    width: 70%;
+}
+.slides {
+    display: flex;
+    align-items: center;
+}
+
+
+
+/*Блок с нашими контактами*/
+.getintouch {
+    padding: 80px 0;
+}
+.textinput {
+    margin: 40px 0;
+}
+.textinput p, .textmsg p {
+    font-weight: 700;
+    color:#696969;
+    margin-bottom: 5px;
+}
+.textinput p span, textmsg p span {
+    color: #f4511e;
+    margin-left: 5px;
+}
+.textinput input {
+    border: 0;
+    border-bottom: 1px solid #f4511e;
+    width: 90%;
+    height: 40px;
+    outline: 0;
+}
+.textmsg textarea {
+    border: 0;
+    border-bottom: 1px solid #f4511e;
+    width: 95%;
+    height: 80px;
+    outline: 0;
+    padding-top: 10px;
+}
+.submit {
+    width: 200px;
+    height: 50px;
+    letter-spacing: 1px;
+    background: #f4511e;
+    border: 1px solid #f4511e;
+    color: #ffffff;
+    display: block;
+    margin: 50px auto 0;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.getintouch form {
+    width: 70%;
+    margin: 0 auto;
+}
+.textinput input:focus, .textmsg textarea:focus {
+    box-shadow: 0px 1px 2px 3px rgba(246,116,75,0.5);
+}
+.submit:hover {
+    color: #f4511e;
+    background: #ffffff;
+    transition: 0.5s;
+}
+
+
+
+/*Блок с местоположением нашего офиса */
+.map {
+    padding: 30px 0;
+    background: #1f282c;
+    text-align: center;
+    cursor: pointer;
+}
+.map span{
+    margin-left: 10px;
+    font-weight: 700;
+    color: #f4511e;
+    font-size: 24px;
+}
+.map h4 {
+    color: #ebebeb;
+    font-size: 24px;
+    font-weight: 600;
+    display: inline-block;
+    text-transform: uppercase;
+}
+.accordion-open span::before {
+    font-family: 'Linearicons-Free';
+    content: "\e874";
+}
+.accordion-close span::after {
+    font-family: 'Linearicons-Free';
+    content: "\e874";
+}
+
+
+
+/*Блок с подвалом (самая нижняя часть)*/
+footer {
+	background: #171f23;
+	text-align: center;
+	padding: 45px 0 60px;
+}
+footer h4 {
+	font-family: 'bignoodletitling';
+	font-size: 24px;
+	letter-spacing: 1px;
+	color: #fff;
+	padding: 10px 0;
+}
+footer p {
+	color: #fff;
+	font-size: 14px;
+}
+.logo-ft img{
+    width: 80px;
+}
+.social img{
+    width: 40px;
+}
+
+
+
+/* Блок портфолио */
+/* Стили для карточек в блоке - портфолио*/
+/* Убрать отступ от фильтра*/
+.outworks .head_white_content {
+    padding-bottom: 20px;
+}
+/*Стили для фильтрующего меню*/
+#filters {
+    margin: 1% auto;
+    width: 100%;
+    text-align: center;
+}
+#filters li {
+    display: inline-block;
+    padding: 5px 10px;
+}
+.filter {
+    display: block;
+    cursor: pointer;
+    color: #696969;
+    font-family: sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+.filter.active {
+    font-weight: 700;
+    color: #696969;
+    border-bottom: 1px solid #f4511e;
+}
+/*Стили для карточек*/
+/*задгий фон для описания*/
+.imgDisc2 {
+    position: absolute;
+    color: #ffffff;
+    width: 100%;
+    background: rgba(0,0,0,0.5);
+    font-size: 18px;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    padding-top: 100px;
+    cursor: pointer;
+    transition: 0.5s;
+    top: 0;
+    left: 0;
+    bottom: 0;
+}
+/*Появление описания*/
+.portfolio-wrapper:hover .imgDisc2 {
+    visibility: visible;
+    opacity: 1;
+}
+/*Стиль заголовка*/
+.imgDisc2 h1 {
+    font-size: 20px;
+    text-transform: uppercase;
+}
+/*Настройка карточки*/
+#portfoliolist .portfolio {
+    border: none !important;
+    width: 20%;
+    float: left;
+    display: none;
+    overflow: hidden;
+}
+.portfolio-wrapper {
+    cursor: pointer;
+    overflow: hidden;
+    position: relative !important;
+}
+/*Изображение карточки*/
+.portfolio img {
+    width: 100%;
+    display: block;
+    position: relative;
+}
+
+
+
+/*Обратная связь на отправку данных*/
+.send_success {
+    padding: 2%;
+    box-shadow: 0 0 10px rgba(1,255,1,0.5);
+    border: 2px solid rgba(1,255,1,0.5);
+}
+.send_fail {
+    padding: 2%;
+    box-shadow: 0 0 10px rgba(255,1,1,0.5);
+    border: 2px solid rgba(255,1,1,0.5);
+}
+#send_form {
+    transition: all 1s ease-out;
+}
